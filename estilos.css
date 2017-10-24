@@ -128,7 +128,7 @@ ul.nav li a {
 }
 div.contenedor{
 	width: 100%;
-	height: 70vh;
+	height: 75vh;
 	background: url("bg2.jpg");
 	background-position: center; background-repeat: no-repeat;
 	background-size: cover;
@@ -247,7 +247,7 @@ div.contenido-header {
 }
 .caja p {
 	margin: 0;
-	text-align: center;
+	text-align: justify;
 }
 .caja  {
 	color: #ffffff;
@@ -423,12 +423,15 @@ line-height: 27px;
 .contenido-cuarto .servicios-cuatro {
 	color: #c5c5c5;
 	background-color: #1b1b1b;
-	padding: 25px;
+	padding: 20px;
 	margin-top: 40px;
 }
 .servicios-cuatro p {
 	text-align: justify;
 	line-height: 27px;
+	margin: 0;
+	word-spacing:-2px;
+
 }
 .servicios-cuatro h4 {
 	text-align: center;

@@ -12,8 +12,7 @@ var clientes = ["Céspedes 2670.", "Céspedes 2685.", "Stud mont blanc hipódrom
       $('.nav-principal').css('top', '0');
       $("#lista-segunda").hide();
       for (var i = 0; i < clientes.length; i++) {
-        clientes[i]
-        $("#lista-primera").append($("<li>").text(clientes[i]));
+      $("#lista-primera").append($("<li>").text(clientes[i]));
       }
       $("#lista-primera").css("line-height","23px");
 
@@ -54,17 +53,8 @@ var ancho = $(window).width(),
    icono.addClass('fa-bars');
 
   }
-// $('#needs-validation').submit(function() {
-  
-//      $(".mensaje-enviado").text("Su mensaje ha sido enviado correctamente.");
-
-  
-//    return false;
-
-// });
 
   btnMenu.on('click', function(e){
-   // $(".enlaces").parent().toggleClass('active');  
 
    enlaces.slideToggle();
    li.on('click',function(e){
