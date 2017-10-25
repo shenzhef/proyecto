@@ -15,6 +15,7 @@ var clientes = ["Céspedes 2670.", "Céspedes 2685.", "Stud mont blanc hipódrom
       $("#lista-primera").append($("<li>").text(clientes[i]));
       }
       $("#lista-primera").css("line-height","23px");
+          $(".div-izquierdo").insertAfter(".div-derecho");
 
   }
 
@@ -93,6 +94,7 @@ var ancho = $(window).width(),
 $(window).on('resize', function(){ 
    if($(this).width() < 1200){ 
     $(".div-izquierdo").insertAfter(".div-derecho");
+    
    } else {
      $(".div-derecho").insertAfter(".div-izquierdo");
    }
