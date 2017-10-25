@@ -1,4 +1,11 @@
 
+//paste this code under the head tag or in a separate js file.
+  // Wait for window load
+  $(window).load(function() {
+    // Animate loader off screen
+    
+    $(".se-pre-con").fadeOut("slow");;
+  });
 $(function(){
 
 var clientes = ["Céspedes 2670.", "Céspedes 2685.", "Stud mont blanc hipódromo Palermo.", "Club house country boca raton.", "Fabric sushi moreno.", "Oliden 1245." ,"Panatel S.A.", "Organización los andes.", "Adminitraciones del sur."]
@@ -13,12 +20,14 @@ var clientes = ["Céspedes 2670.", "Céspedes 2685.", "Stud mont blanc hipódrom
       $("#lista-segunda").hide();
       for (var i = 0; i < clientes.length; i++) {
       $("#lista-primera").append($("<li>").text(clientes[i]));
-      }
       $("#lista-primera").css("line-height","23px");
           $(".div-izquierdo").insertAfter(".div-derecho");
+          $("h3").removeClass(".header-cont h3:after");
+         $(".contenido-quinto").removeClass(".heading-content");
+
+      }
 
   }
-
 
 
 $(".btn").click(function() {
@@ -56,10 +65,28 @@ var ancho = $(window).width(),
   }
 
   btnMenu.on('click', function(e){
+    if ($(this).hasClass("fa-bars")) {
 
-   enlaces.slideToggle();
-   li.on('click',function(e){
+      enlaces.fadeIn();
+      var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel" //FF doesn't recognize mousewheel as of FF3.x
+$(window).bind(mousewheelevt, function(e){
+
+    var evt = window.event || e //equalize event object     
+    evt = evt.originalEvent ? evt.originalEvent : evt; //convert to originalEvent if possible               
+    var delta = evt.detail ? evt.detail*(-40) : evt.wheelDelta //check for detail first, because it is used by Opera and FF
+
     enlaces.hide();
+       icono.addClass('fa-bars');
+      icono.removeClass('fa-times');
+});
+
+    } else {
+      enlaces.fadeOut();
+    }
+   // enlaces.fadeToggle();
+
+   li.on('click',function(e){
+    enlaces.fadeOut();
     icono.addClass('fa-bars');
       icono.removeClass('fa-times');
    });
@@ -94,7 +121,7 @@ var ancho = $(window).width(),
 $(window).on('resize', function(){ 
    if($(this).width() < 1200){ 
     $(".div-izquierdo").insertAfter(".div-derecho");
-    
+
    } else {
      $(".div-derecho").insertAfter(".div-izquierdo");
    }
