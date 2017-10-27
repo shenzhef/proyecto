@@ -27,6 +27,7 @@ if it's not present, don't show loader */
 
 }
 
+
 h2 {
 	text-transform: uppercase;
 }
@@ -85,13 +86,18 @@ ul.nav  {
 	list-style: none;
 
 }
+.element {
 
+}
 ul.nav li {
 	display: inline-block;
 	/*padding-left: 30px;*/
 	font-family: 'Poppins';
 	padding: 7px 17px 7px 17px;   
 	/*border: 1px solid black;*/
+			text-transform: uppercase;
+			font-weight: 500;
+
 }
 /*.div-nav li:hover {
 	background-color: gray;
@@ -103,7 +109,7 @@ ul.nav li {
 	ul.nav li a {
 		text-decoration: none;
 		font-size: 1.2em;
-		color: white!important;
+		color: black;
 
 	}
 
@@ -115,7 +121,7 @@ ul.nav li {
 		transform: translateY(0%);
 		background-color: rgba(0, 0, 0, 0.94);
 		position: fixed;
-		height: 6%;
+		height: 7%;
 	}
 	.headroom--unpinned {
 		transform: translateY(-110%);
@@ -125,11 +131,11 @@ ul.nav li {
 		background-color: initial;
 		transform: translateY(10%);
 	}
-	.contenido-header {
+	/*.contenido-header {
 		margin: auto;
 		display: table-cell;
 		vertical-align: middle;
-	}
+	}*/
 	.contenido-header h1{
 		color: black;
 		font-weight: 600;
@@ -143,14 +149,15 @@ ul.nav li {
 		font-size: 1.4em;
 	}
 	div.contenedor{
-		width: 100%;
-		height: 75vh;
-		background: url("bg2.jpg");
-		background-position: center; background-repeat: no-repeat;
-		background-size: cover;
-		filter: brightness(95%);
-		/*background-attachment: fixed;*/	
-		display: table;
+			width: 100%;
+    height: 75vh;
+    background: url(bg2.jpg);
+    background-position: inherit;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: brightness(92%);
+    background-attachment: fixed;
+    display: table;
 
 	}
 
@@ -172,9 +179,30 @@ ul.nav li {
 		text-align: center;
 		/*padding-top: 100px;*/
 	}
+	.contenido-header p {
+		color: #c69c6d;
+		font-size: 1.37em;
+		font-weight: 600;
+	}
+	.contenido-header h1 {
+		font-size: 3em;
+	}
 
+	@media only screen and (max-width: 1024px) {
+		div.contenedor {
+			width: 100%;
+		height: 75vh;
+		background: url("bg2.jpg");
+		background-position: center; background-repeat: no-repeat;
+		background-size: cover;
+		filter: brightness(92%);
+		/*background-attachment: fixed;*/	
+		display: table;
+		}
+	}
 
 	@media only screen and (max-width: 768px) {
+		
 		.contenido-header h1 {
 			font-size: 2.2em;
 		}
@@ -189,57 +217,53 @@ ul.nav li {
 			padding: 0.2em;
 			align-items: center;
 			background-color: #c69c6d;
+
+		}
+		.contenido-header {
+			margin: auto;
+			display: table-cell;
+			vertical-align: middle;
 		}
 
 		.nav-principal .logo .btn-menu {
 			display: inline-block;
 			font-size: 1.85em;
+			margin-right: 6px;
 
 		}
 		.nav-principal {
 			top: 0!important;
-}
-.subtitulo-h3{
-	padding-top: 10px;
-}
+		}
+		.subtitulo-h3{
+			padding-top: 10px;
+		}
 
 		.nav {
 			background-color: #c69c6d;
 			width: 100%;
-		/*width: 100%;
-		
-		display: flex;
 
-		flex-wrap: wrap;
-		z-index: -2;
-		-webkit-flex-direction: column;
-		flex-direction: column;
-		justify-content: space-between;*/
-		/*display: inline-block;*/
-		/*display: block;*/
-	}
-	.div-nav {
-		display: block!important;
-	}
-	.nav li {
-		display: block!important;
-		padding: 0.8em!important;
-	}
-	.nav li:hover {
-		background-color: black;
-	}
-	.element {
-		display: block!important;
-		width: 100%;
-		text-align: left;
-		/*padding: 1em;*/
-		text-transform: uppercase;
-	}
-	.nav li {
-		font-family: 'Poppins';
+		}
+		.div-nav {
+			display: block!important;
+		}
+		.nav li {
+			display: block!important;
+			padding: 0.8em!important;
+		}
+		.nav li:hover {
+			background-color: black;
+		}
+		.element {
+			display: block!important;
+			width: 100%;
+			text-align: left;
+			/*padding: 1em;*/
+		}
+		.nav li {
+			font-family: 'Poppins';
 
-	}
-	
+		}
+
 	
 }
 
@@ -599,7 +623,7 @@ ul.nav li {
 	/*div quinto*/
 	.contenido-quinto {
 		background-image: url(bg4.png);
-		line-height: 40px;
+		line-height: 35px;
 		width: 100%;
 		font-family: 'Poppins';
 		margin-top: 2%;
@@ -884,8 +908,9 @@ form input[type='submit']:hover {
 	line-height: 25px;
 	margin-top: 10px;
 	text-transform: uppercase;
-	font-size: 1.2em;
+	font-size: 1.32em;
 	text-align: center;
+	font-weight: 500;
 }
 .contenido-sexto ul {
 	list-style: none;
